@@ -4,9 +4,10 @@
   "description": "Skeleton for Codewars Solidity Katas",
   "main": "index.js",
   "scripts": {
-    "hardhat:clean": "npx hardhat clean",
     "hardhat:console": "npx hardhat console",
+    "hardhat:clean": "npx hardhat clean",
     "hardhat:compile": "npx hardhat compile",
+    "hardhat:cleanAndCompile": "npm run hardhat:clean && npm run hardhat:compile",
     "hardhat:deploy": "npx hardhat run scripts/deploy.js",
     "hardhat:test": "npx hardhat test",
     "hardhat:node": "npx hardhat node"
