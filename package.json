@@ -7,6 +7,7 @@
     "hardhat:clean": "npx hardhat clean",
     "hardhat:console": "npx hardhat console",
     "hardhat:compile": "npx hardhat compile",
+    "hardhat:deploy": "npx hardhat run scripts/deploy.js",
     "hardhat:test": "npx hardhat test",
     "hardhat:node": "npx hardhat node"
   },
