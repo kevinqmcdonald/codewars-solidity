@@ -1,19 +1,18 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("Greeter", function () {
-  it("Should return the new greeting once it's changed", async function () {
-    const Greeter = await ethers.getContractFactory("Greeter");
-    const greeter = await Greeter.deploy("Hello, world!");
-    await greeter.deployed();
+describe("Repeater", function () {
+  let repeater;
+  beforeEach(async () => {
+    const Repeater = await ethers.getContractFactory("Kata");
+    repeater = await Repeater.deploy();
+    await repeater.deployed();
+  });
 
-    expect(await greeter.greet()).to.equal("Hello, world!");
-
-    const setGreetingTx = await greeter.setGreeting("Hola, mundo!");
-
-    // wait until the transaction is mined
-    await setGreetingTx.wait();
-
-    expect(await greeter.greet()).to.equal("Hola, mundo!");
+  it("should have a function 'multiply' that correctly multiplies two integers (Sample Test)", async function () {
+    expect(await repeater.multiply(4, "a")).to.equal("aaaa");
+    expect(await repeater.multiply(3, "Hello")).to.equal("HelloHelloHello");
+    expect(await repeater.multiply(5, "")).to.equal("");
+    expect(await repeater.multiply(0, "kata")).to.equal("");
   });
 });
