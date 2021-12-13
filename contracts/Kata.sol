@@ -5,8 +5,4 @@ import "hardhat/console.sol";
 
 contract Kata {
 
-    constructor() {
-
-    }
-
 }
