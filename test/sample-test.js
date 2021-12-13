@@ -20,5 +20,7 @@ describe("Kata", function () {
 
       expect(await greeter.greet()).to.equal("Hola, mundo!");
     */
+    expect(await contract.angle(3)).to.equal(180);
+    expect(await contract.angle(4)).to.equal(360);
   });
 });

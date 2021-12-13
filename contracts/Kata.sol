@@ -2,5 +2,7 @@
 pragma solidity ^0.4.19;
 
 contract Kata {
-    // Insert contract code here
+    function angle(int n) public pure returns (int) {
+        return (n - 2) * 180;
+    }
 }
